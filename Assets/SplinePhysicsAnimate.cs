@@ -44,33 +44,32 @@ public class SplinePhysicsAnimate : MonoBehaviour
 	{
 		Rb.AddForce(Vector3.down * GravityPull);
 
-		if (Input.GetKey(KeyCode.Space))
+		if (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0))
 		{
 			Rb.AddForce(-transform.forward * Speed);
 		}
 
-		var native = new NativeSpline(NewSpline);
+		//var native = new NativeSpline(NewSpline);
 
-		float distance = SplineUtility.GetNearestPoint(native, transform.position, out float3 nearest, out float t);
+		//float distance = SplineUtility.GetNearestPoint(native, transform.position, out float3 nearest, out float t);
 		//nearest += (float3)SplineCont.transform.position;
 		//transform.position = nearest;
 		//transform.position += SplineCont.transform.position;
 
-		Vector3 forward = Vector3.Normalize(native.EvaluateTangent(t));
-		Vector3 up = native.EvaluateUpVector(t);
+		//Vector3 forward = Vector3.Normalize(native.EvaluateTangent(t));
+		//Vector3 up = native.EvaluateUpVector(t);
 
-		var remappedForward = new Vector3(0, 0, 1);
-		var remappedUp = new Vector3(0, 1, 0);
-		var axisRemapRotation = Quaternion.Inverse(Quaternion.LookRotation(remappedForward, remappedUp));
+		//var remappedForward = new Vector3(0, 0, 1);
+		//var remappedUp = new Vector3(0, 1, 0);
+		//var axisRemapRotation = Quaternion.Inverse(Quaternion.LookRotation(remappedForward, remappedUp));
 
-		if (OnTrack)
-		{
+		//if (OnTrack)
+		//{
 			//transform.rotation = Quaternion.LookRotation(forward, up) * axisRemapRotation;
-		}
+		//}
 
 		//Rb.linearVelocity = Rb.linearVelocity.magnitude * engineForward;
 
-		Debug.Log(Rb.linearVelocity.magnitude);
 	}
 
 	public void ToggleAttachment()
