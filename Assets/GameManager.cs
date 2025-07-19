@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
 	{
 		ThrillPoint.Collected += PointCollected;
 		PointsToCollect = FindObjectsByType<ThrillPoint>(FindObjectsSortMode.None).ToList<ThrillPoint>();
+		PointsTMP.text = $"{PointsCollected} / {MaxPoints}";
 	}
 
 	private void Update()
