@@ -14,6 +14,7 @@ public class SplinePhysicsAnimate : MonoBehaviour
 	private Rigidbody Rb = null;
 
 
+	[SerializeField] private bool TurnWithTrack = false;
 	[SerializeField] private bool OnTrack = true;
 
 	[SerializeField] private float DistanceFromPath = 0.15f;
@@ -48,27 +49,29 @@ public class SplinePhysicsAnimate : MonoBehaviour
 		{
 			Rb.AddForce(-transform.forward * Speed);
 		}
+		if (TurnWithTrack)
+		{
+			var native = new NativeSpline(NewSpline);
 
-		//var native = new NativeSpline(NewSpline);
+			float distance = SplineUtility.GetNearestPoint(native, transform.position, out float3 nearest, out float t);
+			//nearest += (float3)SplineCont.transform.position;
+			//transform.position = nearest;
+			//transform.position += SplineCont.transform.position;
 
-		//float distance = SplineUtility.GetNearestPoint(native, transform.position, out float3 nearest, out float t);
-		//nearest += (float3)SplineCont.transform.position;
-		//transform.position = nearest;
-		//transform.position += SplineCont.transform.position;
+			Vector3 forward = Vector3.Normalize(native.EvaluateTangent(t));
+			Vector3 up = native.EvaluateUpVector(t);
 
-		//Vector3 forward = Vector3.Normalize(native.EvaluateTangent(t));
-		//Vector3 up = native.EvaluateUpVector(t);
+			var remappedForward = new Vector3(0, 0, 1);
+			var remappedUp = new Vector3(0, 1, 0);
+			var axisRemapRotation = Quaternion.Inverse(Quaternion.LookRotation(remappedForward, remappedUp));
 
-		//var remappedForward = new Vector3(0, 0, 1);
-		//var remappedUp = new Vector3(0, 1, 0);
-		//var axisRemapRotation = Quaternion.Inverse(Quaternion.LookRotation(remappedForward, remappedUp));
+			if (OnTrack)
+			{
+				transform.rotation = Quaternion.LookRotation(-forward, up) * axisRemapRotation;
+			}
+			//Rb.linearVelocity = Rb.linearVelocity.magnitude * -transform.forward;
+		}
 
-		//if (OnTrack)
-		//{
-			//transform.rotation = Quaternion.LookRotation(forward, up) * axisRemapRotation;
-		//}
-
-		//Rb.linearVelocity = Rb.linearVelocity.magnitude * engineForward;
 
 	}
 

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+[DefaultExecutionOrder(-10)]
 public class LevelTracker : MonoBehaviour
 {
 	public static LevelTracker Tracker;
@@ -15,13 +16,7 @@ public class LevelTracker : MonoBehaviour
 
 	private void Awake()
 	{
-		if (Tracker != null && Tracker != this)
-		{
-			Destroy(gameObject);
-		}
-
 		Tracker = this;
-		DontDestroyOnLoad(gameObject);
 	}
 
 	public void UnlockLevel()
