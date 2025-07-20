@@ -963,6 +963,56 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a5d348b519038a34ca07f38c16f157ea, type: 3}
   m_PrefabInstance: {fileID: 2146273807}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &136006998
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 136007000}
+  - component: {fileID: 136006999}
+  m_Layer: 0
+  m_Name: LevelTracker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &136006999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136006998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95fd121a8211756459ace6698493aec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelNames:
+  - Level1
+  - Level2
+  - Level3
+  - Level4
+  - Level5
+--- !u!4 &136007000
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136006998}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.1682931, y: 11.327225, z: -7.181562}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &136761734
 GameObject:
   m_ObjectHideFlags: 0
@@ -7377,6 +7427,7 @@ GameObject:
   - component: {fileID: 920886107}
   - component: {fileID: 920886106}
   - component: {fileID: 920886105}
+  - component: {fileID: 920886108}
   m_Layer: 5
   m_Name: Next
   m_TagString: Untagged
@@ -7498,6 +7549,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 920886103}
   m_CullTransparentMesh: 1
+--- !u!114 &920886108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920886103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b737b8b31a73f404298b2ad724aaf14a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelName: Level2
 --- !u!4 &921097277 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a5d348b519038a34ca07f38c16f157ea, type: 3}
@@ -18050,6 +18114,7 @@ SceneRoots:
   - {fileID: 832575519}
   - {fileID: 78222186}
   - {fileID: 640855787}
+  - {fileID: 136007000}
   - {fileID: 2128076275}
   - {fileID: 301990631}
   - {fileID: 1646664027}
