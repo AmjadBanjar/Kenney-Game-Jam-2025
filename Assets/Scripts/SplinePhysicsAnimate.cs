@@ -5,11 +5,9 @@ using UnityEngine.Splines;
 
 public class SplinePhysicsAnimate : MonoBehaviour
 {
-	[SerializeField]private SplineContainer SplineCont = null;
+	[SerializeField] private SplineContainer SplineCont = null;
 
 	private Spline Spline = null;
-
-	private Spline NewSpline = null;
 
 	private Rigidbody Rb = null;
 
@@ -26,18 +24,12 @@ public class SplinePhysicsAnimate : MonoBehaviour
 	private Vector3 StartingPosition = Vector3.zero;
 
 	[Button]
-	public void Restart() { transform.position = StartingPosition; }
+	public void Restart() => transform.position = StartingPosition; 
 
 	private void Awake()
 	{
 		StartingPosition = transform.position;
 		Spline = SplineCont.Spline;
-		Spline testSpline = new();
-		foreach (var item in Spline.Knots)
-		{
-			testSpline.Add(new BezierKnot((Vector3)item.Position + SplineCont.transform.position, item.TangentIn, item.TangentOut, item.Rotation));
-		}
-		NewSpline = testSpline;
 		Rb = GetComponent<Rigidbody>();
 	}
 
@@ -51,9 +43,10 @@ public class SplinePhysicsAnimate : MonoBehaviour
 		}
 		if (TurnWithTrack)
 		{
-			var native = new NativeSpline(NewSpline);
+			var native = new NativeSpline(Spline);
 
 			float distance = SplineUtility.GetNearestPoint(native, transform.position, out float3 nearest, out float t);
+
 			//nearest += (float3)SplineCont.transform.position;
 			//transform.position = nearest;
 			//transform.position += SplineCont.transform.position;
@@ -80,7 +73,7 @@ public class SplinePhysicsAnimate : MonoBehaviour
 		OnTrack = !OnTrack;
 		if (OnTrack)
 		{
-			var native = new NativeSpline(NewSpline);
+			var native = new NativeSpline(Spline);
 			float distance = SplineUtility.GetNearestPoint(native, transform.position, out float3 nearest, out float t);
 			transform.position = nearest;
 			Rb.useGravity = false;

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Cart
   - Star
+  - Track
   layers:
   - Default
   - TransparentFX

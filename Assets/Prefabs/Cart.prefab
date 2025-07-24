@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2792147674345307710}
   - component: {fileID: 6232309899607770491}
   - component: {fileID: 4304659923950770467}
-  - component: {fileID: 8634437858715865760}
+  - component: {fileID: 4857264029132483140}
   m_Layer: 0
   m_Name: Cart
   m_TagString: Cart
@@ -36,6 +36,7 @@ Transform:
   m_Children:
   - {fileID: 6841297818077020658}
   - {fileID: 5103343718661346751}
+  - {fileID: 7544125095256159376}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7737630991474621820
@@ -116,7 +117,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 96
+  m_Constraints: 98
   m_CollisionDetection: 0
 --- !u!114 &4304659923950770467
 MonoBehaviour:
@@ -131,11 +132,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SplineCont: {fileID: 0}
+  TurnWithTrack: 0
   OnTrack: 1
   DistanceFromPath: 0.15
   Speed: 200
   GravityPull: 50
---- !u!136 &8634437858715865760
+--- !u!136 &4857264029132483140
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -154,8 +156,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.26
-  m_Height: 1.52
+  m_Radius: 0.35
+  m_Height: 1.4
   m_Direction: 2
   m_Center: {x: 0, y: 0.3085, z: 0}
 --- !u!1 &2529555130237194883
@@ -383,3 +385,56 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 0.08, z: 1}
   m_Center: {x: 0, y: 0.06, z: 0}
+--- !u!1 &8656567324379015512
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7544125095256159376}
+  - component: {fileID: 5864416035950142349}
+  m_Layer: 0
+  m_Name: GroundDetector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7544125095256159376
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8656567324379015512}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3252242060558338372}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &5864416035950142349
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8656567324379015512}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.58, y: 0.12, z: 1.42}
+  m_Center: {x: 0, y: 0, z: 0}
