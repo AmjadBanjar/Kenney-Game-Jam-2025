@@ -1,4 +1,5 @@
 using NaughtyAttributes;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -19,11 +20,18 @@ public class LevelTracker : MonoBehaviour
 		Tracker = this;
 	}
 
+	[Obsolete]
 	public void UnlockLevel()
 	{
 		string currnetScene = SceneManager.GetActiveScene().name;
 		PlayerPrefs.SetString(currnetScene, "Win");
 	}
+
+	public void UnlockLevelPrefab(string levelName)
+	{
+
+	}
+
 	[Button]
 	public void UnlockLevelDebug()
 	{
