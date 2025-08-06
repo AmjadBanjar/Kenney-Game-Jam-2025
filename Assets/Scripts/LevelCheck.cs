@@ -5,7 +5,7 @@ public class LevelCheck : MonoBehaviour
 {
 	public string LevelName = "Level";
 	public Level AttachedLevel = null;
-	private Button AttachedButton = null;
+	private LevelLoaderButton AttachedButton = null;
 
 	private void OnEnable()
 	{
@@ -15,11 +15,15 @@ public class LevelCheck : MonoBehaviour
 			return;
 		}
 
-		AttachedButton = GetComponent<Button>();
+		AttachedButton = GetComponent<LevelLoaderButton>();
 
 		if (AttachedLevel.IsLevelCompleted)
 		{
 			AttachedButton.interactable = true;
+		}
+		else
+		{
+			AttachedButton.interactable = false;
 		}
 	}
 }

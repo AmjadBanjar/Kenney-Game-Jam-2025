@@ -2380,7 +2380,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1447967200829413808}
   m_Layer: 0
-  m_Name: LevelPrefabTemplate
+  m_Name: LevelPrefabTemplate 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3546,7 +3546,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8dca829e0f5fd9d45ab109c6e1230750, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.643087
+      value: -7.16
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8dca829e0f5fd9d45ab109c6e1230750, type: 3}
       propertyPath: m_LocalPosition.y

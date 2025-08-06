@@ -17,7 +17,7 @@ public class PrefabLevelLoader : MonoBehaviour
 			Destroy(gameObject);
 			return;
 		}
-
+		DontDestroyOnLoad(gameObject);
 		Instance = this;
 	}
 

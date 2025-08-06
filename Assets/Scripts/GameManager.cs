@@ -87,7 +87,8 @@ public class GameManager : MonoBehaviour
 
 		if (win)
 		{
-			LevelTracker.Tracker.UnlockLevel();
+			//LevelTracker.Tracker.UnlockLevel();
+			PrefabLevelLoader.Instance.CurrentActiveLevel.UnlockLevel();
 			WinPanel.SetActive(true);
 			NextLevelButton.interactable = true;
 		}
