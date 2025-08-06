@@ -44,6 +44,7 @@ public class PrefabLevelLoader : MonoBehaviour
 		}
 
 		ActiveLevelPrefab = Instantiate(levelToLoad.LevelPrefab);
+		CurrentActiveLevel = levelToLoad;
 	}
 
 	public void LoadPrefab(Level levelToLoad)
@@ -54,5 +55,6 @@ public class PrefabLevelLoader : MonoBehaviour
 		}
 
 		ActiveLevelPrefab = Instantiate(levelToLoad.LevelPrefab);
+		CurrentActiveLevel = levelToLoad;
 	}
 }
