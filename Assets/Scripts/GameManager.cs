@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
 	private void Start()
 	{
 		ThrillPoint.Collected += PointCollected;
-		PointsToCollect = FindObjectsByType<ThrillPoint>(FindObjectsSortMode.None).ToList<ThrillPoint>();
+		//PointsToCollect = FindObjectsByType<ThrillPoint>(FindObjectsSortMode.None).ToList<ThrillPoint>();
 	}
 
 	private void Update()

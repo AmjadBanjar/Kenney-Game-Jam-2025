@@ -15,7 +15,6 @@ public class Level : ScriptableObject
 		{
 			if (PlayerPrefs.GetInt(LevelName) >= 0)
 			{
-				Debug.Log(PlayerPrefs.GetInt(LevelName));
 				return true;
 			}
 			else
@@ -39,8 +38,6 @@ public class Level : ScriptableObject
 		{
 			Debug.Log("Locking Failed");
 		}
-
-		Debug.Log(PlayerPrefs.GetInt(LevelName));
 	}
 	[Button]
 	public void UnlockLevel()
@@ -55,7 +52,5 @@ public class Level : ScriptableObject
 		{
 			Debug.Log("Unlocking Failed");
 		}
-
-		Debug.Log(PlayerPrefs.GetInt(LevelName));
 	}
 }

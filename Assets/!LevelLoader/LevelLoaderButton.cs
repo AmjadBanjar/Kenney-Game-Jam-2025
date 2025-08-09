@@ -13,13 +13,16 @@ public class LevelLoaderButton : Selectable, IPointerClickHandler, ISubmitHandle
 	public Level LevelToLoad = null;
 	public void OnPointerClick(PointerEventData eventData)
 	{
-		if (SwitchScenes)
+		if (interactable)
 		{
-			PrefabLevelLoader.Instance.LoadLevel(LevelToLoad, SceneIndex);
-		}
-		else
-		{
-			PrefabLevelLoader.Instance.LoadPrefab(LevelToLoad);
+			if (SwitchScenes)
+			{
+				PrefabLevelLoader.Instance.LoadLevel(LevelToLoad, SceneIndex);
+			}
+			else
+			{
+				PrefabLevelLoader.Instance.LoadPrefab(LevelToLoad);
+			}
 		}
 	}
 
