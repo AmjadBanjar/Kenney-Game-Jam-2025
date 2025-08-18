@@ -22,7 +22,6 @@ public class GameManager : MonoBehaviour
 
 	public GameObject WinPanel = null;
 	public GameObject LosePanel = null;
-	public Button NextLevelButton = null;
 	public TextMeshProUGUI EndResultTMP = null;
 	public TextMeshProUGUI PointsTMP = null;
 
@@ -90,11 +89,9 @@ public class GameManager : MonoBehaviour
 			//LevelTracker.Tracker.UnlockLevel();
 			PrefabLevelLoader.Instance.CurrentActiveLevel.UnlockLevel();
 			WinPanel.SetActive(true);
-			NextLevelButton.interactable = true;
 		}
 		else
 		{
-			NextLevelButton.interactable = false;
 			LosePanel.SetActive(true);
 		}
 

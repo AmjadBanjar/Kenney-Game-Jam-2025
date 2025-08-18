@@ -2926,7 +2926,6 @@ MonoBehaviour:
   EndPoint: {fileID: 1146962454893376907}
   WinPanel: {fileID: 175820946559614352}
   LosePanel: {fileID: 9002101570386107677}
-  NextLevelButton: {fileID: 0}
   EndResultTMP: {fileID: 5391875561076024415}
   PointsTMP: {fileID: 3153377466779580792}
   PointsCollected: 0

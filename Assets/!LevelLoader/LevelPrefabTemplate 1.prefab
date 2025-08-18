@@ -1007,8 +1007,8 @@ GameObject:
   - component: {fileID: 5010361060453174386}
   - component: {fileID: 8295710401148444352}
   - component: {fileID: 5007730901177400633}
-  - component: {fileID: 502307991597404469}
   - component: {fileID: 4793867011259270393}
+  - component: {fileID: 6285222977451505587}
   m_Layer: 5
   m_Name: Next
   m_TagString: Untagged
@@ -1074,7 +1074,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &502307991597404469
+--- !u!114 &4793867011259270393
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1083,7 +1083,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 2836737144915785571}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: b737b8b31a73f404298b2ad724aaf14a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelName: Level2
+  AttachedLevel: {fileID: 11400000, guid: 9809a910c22c5db47b57272089fe056f, type: 2}
+--- !u!114 &6285222977451505587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2836737144915785571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b407909ba43cc4099892e885f77171, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -1115,35 +1129,9 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 5007730901177400633}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1274354173619726971}
-        m_TargetAssemblyTypeName: SceneSwitcher, Assembly-CSharp
-        m_MethodName: NextScene
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Level2
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &4793867011259270393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2836737144915785571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b737b8b31a73f404298b2ad724aaf14a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LevelName: Level2
-  AttachedLevel: {fileID: 11400000, guid: 9809a910c22c5db47b57272089fe056f, type: 2}
+  SwitchScenes: 0
+  SceneIndex: 1
+  LevelToLoad: {fileID: 11400000, guid: 7dd3019f4a6e8aa4aa5ca6f1da01766c, type: 2}
 --- !u!1 &2886974707694601213
 GameObject:
   m_ObjectHideFlags: 0
@@ -1615,7 +1603,7 @@ GameObject:
   - component: {fileID: 1850766899028253326}
   - component: {fileID: 1990251330586175731}
   - component: {fileID: 3849599491414548318}
-  - component: {fileID: 604201870614167145}
+  - component: {fileID: 348752484218602360}
   m_Layer: 5
   m_Name: Restart
   m_TagString: Untagged
@@ -1681,7 +1669,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &604201870614167145
+--- !u!114 &348752484218602360
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1690,7 +1678,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4278213164722767532}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 00b407909ba43cc4099892e885f77171, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -1722,21 +1710,9 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 3849599491414548318}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1274354173619726971}
-        m_TargetAssemblyTypeName: SceneSwitcher, Assembly-CSharp
-        m_MethodName: RestartScene
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Level1
-          m_BoolArgument: 0
-        m_CallState: 2
+  SwitchScenes: 0
+  SceneIndex: 1
+  LevelToLoad: {fileID: 11400000, guid: 9809a910c22c5db47b57272089fe056f, type: 2}
 --- !u!1 &4369277663181432226
 GameObject:
   m_ObjectHideFlags: 0
@@ -2950,7 +2926,6 @@ MonoBehaviour:
   EndPoint: {fileID: 1146962454893376907}
   WinPanel: {fileID: 175820946559614352}
   LosePanel: {fileID: 9002101570386107677}
-  NextLevelButton: {fileID: 502307991597404469}
   EndResultTMP: {fileID: 5391875561076024415}
   PointsTMP: {fileID: 3153377466779580792}
   PointsCollected: 0
